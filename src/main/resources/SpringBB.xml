@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="ServiceBean" class="com.mkyong.web.service.ServiceImp">
+
+	 	<!-- java.util.List -->
+		<property name="list">
+			<list>
+			<!--  	<value>1</value> -->
+			<!--  	 <ref bean="PersonBean" />  -->
+			 	<bean class="com.kmkyong.web.model.User">
+					<property name="name" value="nimei" />
+					
+					<property name="age" value="111" />
+				</bean>
+			</list>
+		</property>
+
+	</bean>
+	 
+
+</beans>
